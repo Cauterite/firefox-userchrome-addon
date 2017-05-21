@@ -1,0 +1,195 @@
+/* -------------------------------------------------------------------------- */
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* -------------------------------------------------------------------------- */
+
+/* --- main toolbars & menus --- */
+
+@-moz-document url("chrome://browser/content/browser.xul") {
+
+	tooltip,
+	#urlbar,
+	#searchbar,
+	#statusbar-display,
+	tab.tabbrowser-tab,
+	toolbarbutton.bookmark-item
+	{font-family : "Tahoma" !important;}
+	
+	#menu_openApps, #sync-setup, #sync-syncnowitem, #sync-reauthitem, #menu_pageInfo,
+	#menu_bookmarkThisPage, #menu_pocket, #organizeBookmarksSeparator, #menu_pocketSeparator,
+	#urlbar-go-button/*, #urlbar-icons*/
+	{display : none !important;}
+	
+	/* titlebar and min/max/close buttons */
+	@media (-moz-os-version:windows-win8), (-moz-windows-glass) {
+		#main-window[sizemode="maximized"] #titlebar {
+			/*margin-bottom : -67px !important;
+			padding-top : 0px !important;*/
+		}
+		#main-window[sizemode="normal"] #titlebar {
+			padding-top : 0px !important;
+		}
+		#main-window[sizemode="maximized"] #titlebar-buttonbox-container {
+			position: relative !important;
+			bottom: 5px !important;
+		}
+		#main-window[sizemode="normal"] #titlebar-buttonbox {
+			visibility: visible !important;
+		}
+	}
+	
+	#urlbar {
+		border-inline-start : 1px solid black !important;
+		padding-left : 4px !important;
+	}
+	
+	/* address bar dropdown menu */
+	#PopupAutoCompleteRichResult richlistitem {
+		display : flex !important;
+		justify-content: space-between !important;
+		align-items : center !important;
+		font-family : "Tahoma" !important;
+	}
+	#PopupAutoCompleteRichResult richlistitem :nth-child(1) {
+		margin-left : 6px !important;
+	}
+	#PopupAutoCompleteRichResult richlistitem #ibox-spacer {
+		display : none !important;
+	}
+	#PopupAutoCompleteRichResult richlistitem > * {
+		white-space: nowrap !important;
+	}
+	#PopupAutoCompleteRichResult richlistitem .ac-site-icon {
+		/**/
+	}
+	#PopupAutoCompleteRichResult richlistitem description {
+		margin-top : 0px !important;
+		margin-bottom : 0px !important;
+	}
+}
+
+/* --- extensions list --- */
+
+@-moz-document
+	url("about:addons"),
+	url("chrome://mozapps/content/extensions/extensions.xul")
+{
+	#addon-list richlistitem.addon .icon-container,
+	#addon-list richlistitem.addon .icon-container image.icon {
+	   width : 16px !important; height : 16px !important;
+	}
+	#addon-list richlistitem.addon .content-inner-container {
+		-moz-box-orient: horizontal !important;
+	}
+}
+
+/* --- downloads list --- */
+
+@-moz-document
+	url("about:downloads"),
+	url("chrome://browser/content/places/places.xul"),
+	url("chrome://browser/content/downloads/contentAreaDownloadsView.xul")
+{
+	#downloadsRichListBox richlistitem.download {
+		height: 1px !important;
+	}
+	#downloadsRichListBox richlistitem.download > vbox {
+		display : block !important;
+	}
+	#downloadsRichListBox richlistitem.download > button.downloadButton {
+		margin : 0px !important;
+		padding : 0px !important;
+	}
+	#downloadsRichListBox image.downloadTypeIcon {
+		width : 16px !important; height : 16px !important;
+	}
+	#clearDownloadsButton {display : none !important;}
+}
+
+/* --- remove webpage context-menu entries --- */
+
+@-moz-document url("chrome://browser/content/browser.xul") {
+
+	#context-navigation,
+	#context-openlink, /* Open Link in New Window */
+	#context-bookmarklink, /* Bookmark This Link */
+	#context-savepage, /* Save Page As… */
+	#context-sendpage, /* Send Page Link… */
+	#context-sendlink, /* Send Link… */
+	#context-selectall, /* Select All */
+	#context-sendimage, /* Email Image… */
+	#context-sendvideo, /* Email Video… */
+	#context-keywordfield, /* Add a Keyword for this Search… */
+	#context-setDesktopBackground /* Set As Desktop Background… */
+	{display: none !important;}
+	
+	#context-sep-navigation,
+	#context-sep-viewbgimage,
+	#context-sep-selectall,
+	#context-sep-paste
+	{display: none !important;}
+	
+	#SearchBGImage-Everywhere, /* Search Background Image Everywhere */
+	#SearchBGImage-TinEye, /* Search Background Image on TinEye */
+	#SearchBGImage-Google, /* Search Background Image on Google */
+	#SearchBGImage-Cydral, /* Search Background Image on Cydral */
+	#SearchBGImage-Yandex, /* Search Background Image on Yandex */
+	#SearchBGImage-Baidu /* Search Background Image on Baidu */
+	{display: none !important;}
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+/* -------------------------------------------------------------------------- */

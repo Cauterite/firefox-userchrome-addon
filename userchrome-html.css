@@ -1,0 +1,107 @@
+/* -------------------------------------------------------------------------- */
+
+@namespace url(http://www.w3.org/1999/xhtml);
+
+/* -------------------------------------------------------------------------- */
+
+/* --- ublock --- */
+
+@-moz-document
+	url("chrome://ublock0/content/dashboard.html"),
+	url("chrome://ublock0/content/popup.html"),
+	url("chrome://ublock0/content/document-blocked.html")
+{
+	:root {
+		filter :
+			invert(100%)
+			hue-rotate(180deg)
+			contrast(90%)
+			saturate(200%)
+			brightness(125%);
+		background-color : black;
+	}
+}
+
+@-moz-document url("chrome://ublock0/content/logger-ui.html") {
+	body {background-color : black;}
+	body > * {
+		filter :
+			invert(100%)
+			hue-rotate(180deg)
+			contrast(90%)
+			saturate(200%)
+			brightness(125%);
+		background-color : white;
+	}
+}
+
+/* --- reader --- */
+
+@-moz-document
+	url-prefix("about:reader"),
+	url-prefix("chrome://global/content/reader/aboutReader.html")
+{
+	#reader-toolbar {
+		filter :
+			invert(100%)
+			hue-rotate(180deg)
+			contrast(90%)
+			saturate(200%)
+			brightness(125%);
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+/* -------------------------------------------------------------------------- */
