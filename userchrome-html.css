@@ -7,9 +7,9 @@
 /* --- ublock --- */
 
 @-moz-document
-	url("chrome://ublock0/content/dashboard.html"),
-	url("chrome://ublock0/content/popup.html"),
-	url("chrome://ublock0/content/document-blocked.html")
+	url-prefix("chrome://ublock0/content/dashboard.html"),
+	url-prefix("chrome://ublock0/content/popup.html"),
+	url-prefix("chrome://ublock0/content/document-blocked.html")
 {
 	:root {
 		filter :
@@ -22,7 +22,7 @@
 	}
 }
 
-@-moz-document url("chrome://ublock0/content/logger-ui.html") {
+@-moz-document url-prefix("chrome://ublock0/content/logger-ui.html") {
 	body {background-color : black;}
 	body > * {
 		filter :
